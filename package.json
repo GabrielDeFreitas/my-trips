@@ -1,5 +1,5 @@
 {
-  "name": "react-avancado-boilerplate",
+  "name": "my-tips",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,8 +11,6 @@
     "test:watch": "jest --watch --maxWorkers=25%",
     "test:ci": "jest --runInBand",
     "generate": "yarn plop --plopfile generators/plopfile.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "postinstall": "husky install",
     "prepare": "husky install"
   },

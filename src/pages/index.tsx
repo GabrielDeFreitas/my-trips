@@ -1,5 +1,13 @@
+import dynamic from 'next/dynamic'
 import Main from 'components/Main'
 
-export default function Home() {
-  return <Main />
-}
+const Map = dynamic(() => import('components/Main/Map'), { ssr: false })
+
+const Index = () => (
+  <>
+    <Main />
+    <Map />
+  </>
+)
+
+export default Index

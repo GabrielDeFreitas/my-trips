@@ -1,13 +1,15 @@
 import dynamic from 'next/dynamic'
-import Main from 'components/Main'
+import { InfoOutline } from '@styled-icons/evaicons-outline/InfoOutline'
+
 import LinkWrapper from 'components/LinkWrapper'
 
-const Map = dynamic(() => import('components/Main/Map'), { ssr: false })
+const Map = dynamic(() => import('components/Map'), { ssr: false })
 
 const Index = () => (
   <>
-    <LinkWrapper />
-    <Main />
+    <LinkWrapper href="/about">
+      <InfoOutline size={32} aria-label="About" />
+    </LinkWrapper>
     <Map />
   </>
 )

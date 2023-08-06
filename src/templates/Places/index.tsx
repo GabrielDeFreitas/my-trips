@@ -1,4 +1,8 @@
 /* eslint-disable */
+import { CloseOutline } from '@styled-icons/evaicons-outline'
+import LinkWrapper from 'components/LinkWrapper'
+
+import * as S from './style'
 
 type ImageProps = {
   url: string
@@ -21,12 +25,24 @@ export type PlacesTemplateProps = {
 export default function PlacesTemplate({ place }: PlacesTemplateProps) {
   return (
     <>
-      <h1>{place.name}</h1>
-      <div dangerouslySetInnerHTML={{ __html: place.description.html }}></div>
+      <LinkWrapper href="/">
+        <CloseOutline size={32} aria-label="Go back to map" />
+      </LinkWrapper>
 
-      {place.gallery.map((image, index) => (
-        <img key={`photo-${index}`} src={image.url} alt={place.name} />
-      ))}
+      <S.Wrapper>
+        <S.Container>
+          <S.Heading>{place.name}</S.Heading>
+          <S.Body
+            dangerouslySetInnerHTML={{ __html: place.description.html }}
+          ></S.Body>
+
+          <S.Gallery>
+            {place.gallery.map((image, index) => (
+              <img key={`photo-${index}`} src={image.url} alt={place.name} />
+            ))}
+          </S.Gallery>
+        </S.Container>
+      </S.Wrapper>
     </>
   )
 }

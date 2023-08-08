@@ -1,8 +1,9 @@
-/* eslint-disable */
 import { CloseOutline } from '@styled-icons/evaicons-outline'
 import LinkWrapper from 'components/LinkWrapper'
+import Image from 'next/image'
 
 import * as S from './style'
+import { useRouter } from 'next/router'
 
 type ImageProps = {
   url: string
@@ -23,6 +24,10 @@ export type PlacesTemplateProps = {
 }
 
 export default function PlacesTemplate({ place }: PlacesTemplateProps) {
+  const router = useRouter()
+
+  if (router.isFallback) return null
+
   return (
     <>
       <LinkWrapper href="/">
@@ -33,12 +38,20 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
         <S.Container>
           <S.Heading>{place.name}</S.Heading>
           <S.Body
-            dangerouslySetInnerHTML={{ __html: place.description.html }}
-          ></S.Body>
-
+            dangerouslySetInnerHTML={{ __html: place.description?.html || '' }}
+          />
           <S.Gallery>
             {place.gallery.map((image, index) => (
-              <img key={`photo-${index}`} src={image.url} alt={place.name} />
+              <>
+                <Image
+                  key={`photo-${index}`}
+                  src={image.url}
+                  alt={place.name}
+                  width={image.width}
+                  height={image.height}
+                  quality={75}
+                />
+              </>
             ))}
           </S.Gallery>
         </S.Container>

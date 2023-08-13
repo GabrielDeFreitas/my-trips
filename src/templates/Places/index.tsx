@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 import * as S from './style'
 import { useRouter } from 'next/router'
+import Author from 'components/Author'
 
 type ImageProps = {
   url: string
@@ -61,6 +62,7 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
 
       <S.Wrapper>
         <S.Container>
+          <Author />
           <S.Heading>{place.name}</S.Heading>
           <S.Body
             dangerouslySetInnerHTML={{ __html: place.description?.html || '' }}

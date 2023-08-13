@@ -59,3 +59,26 @@ export const Caption = styled.p`
     font-size: var(--small);
   }
 `
+
+export const AuthorWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  box-sizing: inherit;
+  border-bottom: solid 1px #f2f2f2;
+  padding-bottom: 1rem;
+`
+
+export const Content = styled.div`
+  margin-left: 1rem;
+  display: block;
+  width: 100%;
+`
+
+export const Name = styled.h3`
+  font-size: 1.5rem;
+  font-weight: 600;
+`
+
+export const PostDate = styled.p`
+  font-size: 1.25rem;
+`

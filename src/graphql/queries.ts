@@ -70,6 +70,11 @@ export const GET_PLACE_BY_SLUG = gql`
         height
         width
       }
+      createdAt
+      createdBy {
+        name
+        picture
+      }
     }
   }
 `

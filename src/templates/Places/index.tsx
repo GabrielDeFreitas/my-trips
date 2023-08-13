@@ -6,7 +6,6 @@ import Image from 'next/image'
 
 import * as S from './style'
 import { useRouter } from 'next/router'
-import Author from 'components/Author'
 
 type ImageProps = {
   url: string
@@ -23,6 +22,11 @@ export type PlacesTemplateProps = {
       text: string
     }
     gallery: ImageProps[]
+    createdAt: number
+    createdBy: {
+      name: string
+      picture: string
+    }
   }
 }
 
@@ -62,7 +66,19 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
 
       <S.Wrapper>
         <S.Container>
-          <Author />
+          <S.AuthorWrapper>
+            <Image
+              src={place.createdBy.picture}
+              alt="teste"
+              width="44"
+              height="44"
+              quality={75}
+            />
+            <S.Content>
+              <S.Name>{place.createdBy.name}</S.Name>
+              <S.PostDate>{place.createdAt}</S.PostDate>
+            </S.Content>
+          </S.AuthorWrapper>
           <S.Heading>{place.name}</S.Heading>
           <S.Body
             dangerouslySetInnerHTML={{ __html: place.description?.html || '' }}

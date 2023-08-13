@@ -1,6 +1,8 @@
 ## My Trips
 
-> A simple website to show pinned places that you went or you want to go
+> Live Site URL: [my-trips-gabrielfreitas](https://my-trips-gabrieldefreitas.vercel.app/)
+
+> A simple website to show pinned places that you went or you want to go.
  
 ## Getting Started
 

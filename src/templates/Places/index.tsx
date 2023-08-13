@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo'
+import { format } from 'date-fns'
 
 import { CloseOutline } from '@styled-icons/evaicons-outline'
 import LinkWrapper from 'components/LinkWrapper'
@@ -76,7 +77,9 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
             />
             <S.Content>
               <S.Name>{place.createdBy.name}</S.Name>
-              <S.PostDate>{place.createdAt}</S.PostDate>
+              <S.PostDate>
+                {format(new Date(place.createdAt), "dd/MM/yyyy 'às' HH:mm")}
+              </S.PostDate>
             </S.Content>
           </S.AuthorWrapper>
           <S.Heading>{place.name}</S.Heading>

@@ -8,7 +8,7 @@
 
 ### GraphCMS
 
-This project uses [GraphCMS](https://graphcms.com/), so you need to create an account there first.
+This project uses [Hygraph](https://hygraph.com/), so you need to create an account there first.
 
 After you need to create the Schema, just follow the steps:
 

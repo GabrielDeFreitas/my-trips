@@ -32,7 +32,7 @@ export default function HomeTemplate({ places }: MapProps) {
         }}
       />
       <LinkWrapper href="/about">
-        <InfoOutline size={32} aria-label="About" />
+        <InfoOutline size={32} aria-label="About" title="About" />
       </LinkWrapper>
       <Map places={places} />
     </>

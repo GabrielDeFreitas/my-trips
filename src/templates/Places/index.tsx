@@ -64,26 +64,13 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
       <LinkWrapper href="/">
         <CloseOutline size={32} aria-label="Go back to map" />
       </LinkWrapper>
-
       <S.Wrapper>
         <S.Container>
-          <S.AuthorWrapper>
-            <Image
-              src={place.createdBy.picture}
-              alt="teste"
-              width="44"
-              height="44"
-              quality={75}
-            />
-            <S.Content>
-              <S.Name>{place.createdBy.name}</S.Name>
-              <S.PostDate>
-                {format(new Date(place.createdAt), "dd/MM/yyyy 'às' HH:mm")}
-              </S.PostDate>
-            </S.Content>
-          </S.AuthorWrapper>
-          <S.Heading>{place.name}</S.Heading>
-          <S.Body
+          <h1>{place.name}</h1>
+          <S.PostDate>
+            {format(new Date(place.createdAt), "dd/MM/yyyy 'às' HH:mm")}
+          </S.PostDate>
+          <div
             dangerouslySetInnerHTML={{ __html: place.description?.html || '' }}
           />
           <S.Gallery>

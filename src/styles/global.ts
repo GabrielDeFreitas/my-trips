@@ -3,8 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
 
   :root {
-    --highlight: #e20e8d;
-    --background: #030518;
+    --highlight: #29bc89;
+    --background: #1d1f20;
     --white: #eeeeee;
     --grey: #cccccc;
 
@@ -38,6 +38,25 @@ const GlobalStyles = createGlobalStyle`
   p,a {
     font-size: 2rem;
     line-height: var(--medium);
+    margin-block: var(--small);
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: var(--medium);
+    margin-block: var(--small);
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: var(--medium);
+    margin-block: var(--small);
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: var(--medium);
+    margin-block: var(--small);
   }
 
   a {

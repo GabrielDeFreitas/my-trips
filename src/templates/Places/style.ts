@@ -10,19 +10,6 @@ export const Container = styled.section`
   margin: auto;
 `
 
-export const Heading = styled.h1`
-  font-size: var(--large);
-  margin-bottom: var(--medium);
-`
-
-export const Body = styled.div`
-  margin-bottom: var(--large);
-
-  p {
-    margin-bottom: var(--medium);
-  }
-`
-
 export const Gallery = styled.div`
   display: grid;
   margin-top: var(--medium);
@@ -51,16 +38,6 @@ export const Gallery = styled.div`
   }
 `
 
-export const Caption = styled.p`
-  font-size: var(--small);
-  color: var(--grey);
-  margin-bottom: var(--medium);
-
-  a {
-    font-size: var(--small);
-  }
-`
-
 export const AuthorWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -75,11 +52,7 @@ export const Content = styled.div`
   width: 100%;
 `
 
-export const Name = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 600;
-`
-
 export const PostDate = styled.p`
   font-size: 1.25rem;
+  color: var(--highlight);
 `

@@ -24,17 +24,26 @@ const PageTemplate = ({ heading, body }: PageTemplateProps) => (
       <h2>Fique à vontade para me contatar.</h2>
       <S.List>
         <li>
-          <LinkBasic href="/" ariaLabel="Github">
+          <LinkBasic
+            href="https://github.com/GabrielDeFreitas"
+            ariaLabel="Github"
+          >
             <GithubSquare size={50} />
           </LinkBasic>
         </li>
         <li>
-          <LinkBasic href="/" ariaLabel="Linkedin">
+          <LinkBasic
+            href="https://www.linkedin.com/in/gabrielfreitas21/"
+            ariaLabel="Linkedin"
+          >
             <Linkedin size={50} />
           </LinkBasic>
         </li>
         <li>
-          <LinkBasic href="/" ariaLabel="Twitter">
+          <LinkBasic
+            href="https://twitter.com/refri_comfrango"
+            ariaLabel="Twitter"
+          >
             <TwitterSquare size={50} />
           </LinkBasic>
         </li>

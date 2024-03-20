@@ -52,7 +52,7 @@ export const Content = styled.div`
   width: 100%;
 `
 
-export const PostDate = styled.p`
+export const PostDate = styled.small`
   font-size: 1.25rem;
   color: var(--highlight);
 `

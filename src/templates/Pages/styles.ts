@@ -12,3 +12,9 @@ export const Content = styled.section`
 export const Wrapper = styled.div`
   padding: var(--large) var(--medium);
 `
+export const List = styled.ul`
+  display: flex;
+  gap: 2.75rem;
+  margin-block: 3.25rem;
+  list-style-type: none;
+`
